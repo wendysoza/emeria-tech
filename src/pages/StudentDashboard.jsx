@@ -15,19 +15,7 @@ import { MemoryGameView, HangmanGameView, TimeAttackGameView, SortingGameView, P
   osc.connect(gainNode); gainNode.connect(ctx.destination);
   if (type === 'success') {
     osc.type = 'sine'; osc.frequency.setValueAtTime(440, ctx.currentTime); 
-    osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1); 
-    gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-    osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.5);
-  } else if (type === 'error') {
-    osc.type = 'sawtooth'; osc.frequency.setValueAtTime(150, ctx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.3);
-    gainNode.gain.setValueAtTime(0.1, ctx.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
-    osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.3);
-  } else if (type === 'click') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(800, ctx.currentTime);
-    gainNode.gain.setValueAtTime(0.05, ctx.currentTime);
+    o
     gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
     osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.1);
   }
