@@ -6,21 +6,6 @@ import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 // IMPORTAR EL MOTOR DE JUEGOS
 import { MemoryGameView, HangmanGameView, TimeAttackGameView, SortingGameView, PromptGameView, ScenarioGameView } from '../components/ArcadeGames';
 
-/* const playSound = (type) => {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) return;
-  const ctx = new AudioContext();
-  const osc = ctx.createOscillator();
-  const gainNode = ctx.createGain();
-  osc.connect(gainNode); gainNode.connect(ctx.destination);
-  if (type === 'success') {
-    osc.type = 'sine'; osc.frequency.setValueAtTime(440, ctx.currentTime); 
-    o
-    gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
-    osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.1);
-  }
-}; */
-
 /**
  * Configuración de rutas para los efectos de sonido.
  * Asegúrate de que los archivos estén en la carpeta public/assets/
