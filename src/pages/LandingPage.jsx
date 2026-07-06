@@ -67,7 +67,7 @@ export default function LandingPage({ onNavigateToAuth }) {
             <GraduationCap className="w-4 h-4" /> Proyecto de Titulación UNESUM
           </div>
           <h1 className="text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-8 drop-shadow-2xl">
-            Gamificación para las <br/>
+            Juegos interactivos para las <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
               Tecnologías Emergentes
             </span>
