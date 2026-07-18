@@ -187,10 +187,6 @@ function OnboardingScreen({ profile, onComplete, onLogout }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const availableCourses = [
-    "TI - Primer Semestre (Paralelo A)",
-    "TI - Primer Semestre (Paralelo B)",
-    "TI - Segundo Semestre (Paralelo A)",
-    "TI - Segundo Semestre (Paralelo B)",
     "Octavo A",
     "Octavo B",
     "Octavo C",

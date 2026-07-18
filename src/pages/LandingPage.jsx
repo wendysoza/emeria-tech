@@ -1,9 +1,7 @@
 import React, { useState, useRef } from 'react';
-import { Cpu, BrainCircuit, Globe, GraduationCap, ChevronRight, PlayCircle, Lightbulb, Rocket, Award, Send } from 'lucide-react';
-// import videoPromo from '../assets/video_promo.mp4';
+import { Cpu, BrainCircuit, Globe, GraduationCap, ChevronRight, PlayCircle, Lightbulb, Rocket, Award, Send, Search, Zap } from 'lucide-react';
 
 export default function LandingPage({ onNavigateToAuth }) {
-  
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [formStatus, setFormStatus] = useState('');
   const videoRef = useRef(null);
@@ -48,9 +46,6 @@ export default function LandingPage({ onNavigateToAuth }) {
           </div>
         </div>
 
-
-        
-
         {/* LOGO DE LA UNESUM (Flotante Derecha) */}
         <div className="hidden lg:block absolute bottom-20 right-20 animate-float-delayed rotate-y-minus-12 transform-3d z-0">
           <div className="w-40 h-40 bg-slate-200 backdrop-blur-xl border border-white/10 rounded-full flex items-center justify-center shadow-2xl p-5" style={{ animation: 'pulse-glow 5s infinite 1s' }}>
@@ -73,7 +68,7 @@ export default function LandingPage({ onNavigateToAuth }) {
             </span>
           </h1>
           <p className="text-lg lg:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Aplicación de gamificación interactiva diseñada para estudiantes de 8vo semestre de la carrera de Tecnologías de la Información. Desarrolla tus competencias digitales a través de la gamificación.
+            Plataforma diseñada para solventar la falta de aplicación de gamificación en el aprendizaje. Desarrolla tus competencias digitales mediante una experiencia interactiva diseñada para estudiantes de 8vo semestre.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button onClick={onNavigateToAuth} className="w-full sm:w-auto px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-2xl flex items-center justify-center gap-3 transition-all transform hover:scale-105 shadow-[0_0_30px_rgba(37,99,235,0.4)]">
@@ -114,17 +109,19 @@ export default function LandingPage({ onNavigateToAuth }) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-24">
             <h2 className="text-3xl lg:text-5xl font-black text-white mb-6 tracking-tight">Tu Ruta de Aprendizaje</h2>
-            <p className="text-slate-400 text-lg">Un viaje estructurado a través de cuatro misiones principales. Supera cada módulo para dominar la Inteligencia Artificial.</p>
+            <p className="text-slate-400 text-lg">Un viaje estructurado a través de seis misiones principales. Supera cada módulo para dominar la Inteligencia Artificial.</p>
           </div>
 
           <div className="relative max-w-5xl mx-auto">
             <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 via-indigo-500 to-transparent transform md:-translate-x-1/2 rounded-full opacity-30 animate-draw-line"></div>
             <div className="space-y-16">
               {[
-                { id: 1, title: "Introducción a la IA", desc: "Introducción general a las Tecnologías Emergentes y a la Inteligencia Artificial.", icon: <PlayCircle className="w-8 h-8 text-blue-400" /> },
-                { id: 2, title: "Gestión y Avances", desc: "Gestión de Conocimientos y Avances Tecnológicos en el mundo moderno.", icon: <Lightbulb className="w-8 h-8 text-indigo-400" /> },
-                { id: 3, title: "Sistemas Basados", desc: "Sistema basado en el Conocimiento y Resolución de problemas mediante búsqueda.", icon: <BrainCircuit className="w-8 h-8 text-purple-400" /> },
-                { id: 4, title: "Machine Learning", desc: "Aprendizaje automático basado en tecnologías e Incertidumbre en IA.", icon: <Rocket className="w-8 h-8 text-pink-400" /> }
+                { id: 1, title: "Introducción a la IA", desc: "Introducción general a las Tecnologías Emergentes y evolución de la Inteligencia Artificial.", icon: <PlayCircle className="w-8 h-8 text-blue-400" /> },
+                { id: 2, title: "Gestión y Avances", desc: "Fundamentos e impacto de la gestión de conocimientos y avances tecnológicos.", icon: <Lightbulb className="w-8 h-8 text-indigo-400" /> },
+                { id: 3, title: "Sistemas Basados", desc: "Sistemas basados en el Conocimiento, sistemas expertos e Internet de las Cosas (IoT).", icon: <BrainCircuit className="w-8 h-8 text-purple-400" /> },
+                { id: 4, title: "Resolución por Búsqueda", desc: "Entornos Cloud, Blockchain, algoritmos de búsqueda y experiencias de usuario inmersivas.", icon: <Search className="w-8 h-8 text-emerald-400" /> },
+                { id: 5, title: "Machine Learning", desc: "Aprendizaje automático, redes neuronales artificiales y Deep Learning.", icon: <Rocket className="w-8 h-8 text-pink-400" /> },
+                { id: 6, title: "Incertidumbre en IA", desc: "Razonamiento probabilístico, redes bayesianas, lógica difusa y modelos neutrosóficos.", icon: <Zap className="w-8 h-8 text-amber-400" /> }
               ].map((ut, index) => (
                 <div key={ut.id} className={`relative flex flex-col md:flex-row items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} group cursor-pointer`}>
                   <div className="absolute left-8 md:left-1/2 w-12 h-12 bg-[#050B14] border-4 border-blue-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.6)] group-hover:scale-125 transition-transform duration-300">
